@@ -1,24 +1,24 @@
 #include "ESP_I2S.h"
 #include "BluetoothA2DPSink.h"
 
-//pin setup
+//defining pins
 const uint8_t I2S_SCK = 5;       // Audio data bit clock 
 const uint8_t I2S_WS = 25;       // Audio data left and right clock
 const uint8_t I2S_SDOUT = 26;    // ESP32 audio data output to DAC
-const uint8_t prevbutton = 13;  //self explainatory
+const uint8_t prevbutton = 13;   //self explainatory
 const uint8_t nextbutton = 14;
 const uint8_t playbutton = 12;
-const uint8_t autobutton = 27;  //Latching button that enables autoplay on reconnect
+const uint8_t autobutton = 27;   //Latching button that enables autoplay on reconnect
 int8_t IntStat = 0;
-int pbuttonstate = 0; //Play button state for state change detection / edge detection
-int lastpbuttonstate = 0; //last state for edge detection
+int pbuttonstate = 0;            //Play button state for state change detection / edge detection
+int lastpbuttonstate = 0;        //last state for edge detection
 
 I2SClass i2s;
 BluetoothA2DPSink a2dp_sink(i2s);
 
 void setup() {
-    Serial.begin(115200);               //Start serial connection for debugging purposes
-    pinMode(prevbutton, INPUT_PULLUP);  //there's probably a more elegant way of setting multiple pins
+    Serial.begin(115200);                   //Start serial connection for debugging purposes
+    pinMode(prevbutton, INPUT_PULLUP);      //there's probably a more elegant way of setting multiple pins
     pinMode(nextbutton, INPUT_PULLUP);
     pinMode(playbutton, INPUT_PULLUP);
     pinMode(autobutton, INPUT_PULLUP);
@@ -52,6 +52,7 @@ void loop() {
     }
   }
 
+  //The following code could be put into a while(a2dp_sink.is_connected() == true) loop. But not really needed. 
   //Didn't implement edge detection for prev/next buttens for simplicity reasons
   //Not strictly neccesary as it doesn't cause noticable issues
   if(digitalRead(prevbutton) == 0) {
