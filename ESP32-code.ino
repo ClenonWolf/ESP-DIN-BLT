@@ -1,7 +1,7 @@
 #include "ESP_I2S.h"
 #include "BluetoothA2DPSink.h"
 
-//defining pins
+//pin configuration
 const uint8_t I2S_SCK = 5;       // Audio data bit clock 
 const uint8_t I2S_WS = 25;       // Audio data left and right clock
 const uint8_t I2S_SDOUT = 26;    // ESP32 audio data output to DAC
@@ -77,5 +77,5 @@ void loop() {
   lastpbuttonstate = pbuttonstate;
 
   //Delay as a sort of debounce. Also causes audio issues if not used which is probably caused by the reconnect loop 
-  delay(20);
+  delay(50);
 }
