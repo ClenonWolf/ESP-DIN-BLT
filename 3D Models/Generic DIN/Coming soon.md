@@ -1,0 +1,1 @@
+I will be adding a generic DIN model at some point as it turned out that my car doesn't use a standard DIN size for it's blank thingy.

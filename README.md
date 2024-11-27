@@ -3,4 +3,7 @@ An ESP32 Bluetooth module with autoplay for single din height car stereo mount b
 
 
 Documentation is ongoing and not done yet.
-If any mistakes or code improvements are found, please let me know. I'm new to C++ and therefore the code could probably be improved upon a lot.
+If any mistakes or code improvements are found, please let me know. I'm new to C++ and therefore the code could probably be improved upon by a lot.
+
+
+## Hardware used
