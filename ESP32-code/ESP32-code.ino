@@ -37,8 +37,8 @@ void setup() {
     a2dp_sink.start("Music thingy :3");     //start a2dp_sink and specify device name
 }
 
-//Defining the ISRs for each button.
-//I hate the way I did the debounce. So much just for debounce
+//Defining the ISRs for each button
+//I hate the way I did the debounce
 void ISR0() {
   static unsigned long last_interrupt_time = 0;
   unsigned long interrupt_time = millis();
@@ -98,7 +98,7 @@ void loop() {
     next = LOW;
   } 
   if(playpause == HIGH){
-    if(a2dp_sink.get_audio_state() == 0) {    //Check if audio is playing, if not button functionality is play. Check takes kinda long for a button press, maybe improve (button needs to be pressed kinda long)
+    if(a2dp_sink.get_audio_state() == 0) {    //Check if audio is playing, if not button functionality is play
       Serial.println("Play");
       a2dp_sink.play();
     }
