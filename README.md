@@ -7,7 +7,7 @@ If any mistakes or code improvements are found, please let me know. I'm new to C
 
 ## To-Do
 - Ground loop isolation
-- Improve button input system (Better debounce/edge detection) // Fix Play/Pause button not responding 
+- ~~Improve button input system // Fix Play/Pause button not responding~~ Could be implemented nicer. Play/Pause delayed from `a2dp_sink.get_audio_state()` being slow
 - Gerber files and custom PCB (maybe)
 
 ## Images
