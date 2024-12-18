@@ -6,7 +6,7 @@ If any mistakes or code improvements are found, please let me know. I'm new to C
 
 ## To-Do
 - Ground loop isolation (Ongoing)
-- ~~Improve button input system // Fix Play/Pause button not responding~~ Could be implemented nicer.
+- ~~Improve button input system // Fix Play/Pause button not responding~~ Fixed but could be implemented nicer.
 - Gerber files and custom PCB (maybe)
 
 ## Known issues
