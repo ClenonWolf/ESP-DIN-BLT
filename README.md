@@ -1,14 +1,16 @@
 # ESP-DIN-BLT
-An ESP32 Bluetooth module with autoplay for single din height car stereo mount based on the [ESP32-A2DP library](https://github.com/pschatzmann/ESP32-A2DP). Including a Partslist and 3D models for mounting. 
-
+An ESP32 Bluetooth module with autoplay for single din height car stereo mount based on the [ESP32-A2DP library](https://github.com/pschatzmann/ESP32-A2DP). Including a Partslist and 3D models for mounting. Unfortunately I only noticed that the slot for my Car turned out to not be a standard DIN and therefore modelled it after that. I will try to create universal models for normal DIN units so that this can also be used in other cars. Let me know if you need one before I've come around to modelling it.
 
 Documentation is ongoing and not done yet.
 If any mistakes or code improvements are found, please let me know. I'm new to C++ and therefore the code could probably be improved upon by a lot.
 
 ## To-Do
-- Ground loop isolation
-- ~~Improve button input system // Fix Play/Pause button not responding~~ Could be implemented nicer. Play/Pause delayed from `a2dp_sink.get_audio_state()` being slow
+- Ground loop isolation (Ongoing)
+- ~~Improve button input system // Fix Play/Pause button not responding~~ Could be implemented nicer.
 - Gerber files and custom PCB (maybe)
+
+## Known issues
+- Play/Pause delayed from `a2dp_sink.get_audio_state()` being slow
 
 ## Images
 ![20241014_183607](https://github.com/user-attachments/assets/40b9645a-7a53-43b8-87d1-05cdac185221)
