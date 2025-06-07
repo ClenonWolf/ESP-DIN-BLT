@@ -77,6 +77,7 @@ void loop() {
       delay(1000);
       Serial.println("waiting for connection...");
     }
+    a2dp_sink.set_volume(127);
     //Autoplay if autoplay-button is latched on
     if((digitalRead(autobutton) == 0) ) {
       Serial.println("Play on reconnect after delay");
